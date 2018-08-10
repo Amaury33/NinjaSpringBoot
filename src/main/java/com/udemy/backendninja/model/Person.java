@@ -7,12 +7,12 @@ import javax.validation.constraints.Size;
 public class Person {
 
 	@NotNull
-	@Size(min=2, max=10)
+	@Size(min = 2, max = 10)
 	private String name;
 	@NotNull
 	@Min(18)
 	private int age;
-	
+
 	public Person() {
 	}
 
@@ -41,5 +41,5 @@ public class Person {
 	@Override
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + "]";
-	}	
+	}
 }

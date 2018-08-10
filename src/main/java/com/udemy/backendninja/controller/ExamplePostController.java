@@ -56,14 +56,14 @@ public class ExamplePostController {
 		LOGGER.info("METHOD: 'addPerson': " + person);
 
 		ModelAndView model = new ModelAndView(RESULT_VIEW);
-		
+
 		if (bindingResult.hasErrors()) {
 			model.setViewName(FORM_VIEW);
 		} else {
 			model.setViewName(RESULT_VIEW);
 			model.addObject("person", person);
 		}
-		
+
 		return model;
 	}
 
