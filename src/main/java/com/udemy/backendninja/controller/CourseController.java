@@ -31,6 +31,7 @@ public class CourseController {
 
 		ModelAndView model = new ModelAndView(COURSES_VIEW);
 		model.addObject("courses", courseService.listAllCourses());
+		model.addObject("course", new Course());
 		return model;
 	}
 
