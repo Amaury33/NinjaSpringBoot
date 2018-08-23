@@ -26,7 +26,7 @@ public class RequestTimeInterceptor extends HandlerInterceptorAdapter {
 			throws Exception {
 		// TODO Auto-generated method stub
 		long startTime = (long) request.getAttribute("startTime");
-		LOGGER.info("REQUEST URL: '" + request.getRequestURL().toString() + "' - Total time: '" + (System.currentTimeMillis() - startTime) + "' ms");
+		LOGGER.info("Url to: '" + request.getRequestURL().toString() + "' in: '" + (System.currentTimeMillis() - startTime) + "' ms");
 
 		super.afterCompletion(request, response, handler, ex);
 	}
