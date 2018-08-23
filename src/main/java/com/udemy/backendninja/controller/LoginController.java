@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.udemy.backendninja.constant.ViewConstant;
 import com.udemy.backendninja.model.UserCredential;
 
 @Controller
@@ -31,7 +32,7 @@ public class LoginController {
 		model.addAttribute("logout", logout);
 		LOG.info("Return to login page.");
 
-		return "login";
+		return ViewConstant.LOGIN;
 	}
 
 	@PostMapping("/loginCheck")
@@ -39,7 +40,7 @@ public class LoginController {
 		LOG.info("METHOD: loginCheck() -- PARAMS: userCredential=" + userCredential.toString());
 		if (userCredential.getUsername().equals("user") && userCredential.getPassword().equals("user")) {
 			LOG.info("Return to contacts page.");
-			return "contacts";
+			return ViewConstant.CONTACTS;
 		}
 
 		LOG.info("Return to login page (error).");
